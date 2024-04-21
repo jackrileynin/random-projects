@@ -1,0 +1,93 @@
+/* Resetting default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Centering containers horizontally */
+
+.main{
+    height: 600px;
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Styling for the header */
+.header {
+    background-color: antiquewhite;
+    border: 2px solid coral;
+    border-radius: 2px;
+    text-align: center; /* Centering text horizontally */
+    padding: 10px;
+}
+
+/* Styling for the header span */
+.header span {
+    color: red;
+    height: 150px;
+}
+
+/* Styling for the binary input */
+#binary {
+    box-shadow: 3px;
+}
+
+/* Styling for the input form */
+.input-form {
+    height: 290px;
+    width: 400px
+}
+
+/* Styling for the form content */
+.input-form-content {
+    margin-bottom: 10px;
+}
+
+/* Styling for labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Styling for text inputs */
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Styling for buttons */
+input[type="button"] {
+    padding: 8px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.output-form{
+    width: 200px;
+    height: 100px;
+}
+
+/* Styling for the output form */
+.output-form-content {
+    margin-top: 10px;
+    background-color: aqua;
+    width: 200px;
+    height: 100px;
+    color: black;
+    
+}
+
+/* Styling for the output text */
+.output {
+    font-weight: bold;
+    color: black;
+    width: 20px;
+    height: 20px;
+}
