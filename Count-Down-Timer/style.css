@@ -1,0 +1,84 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+input{
+    height: 20px;
+}
+
+#navbar {
+    margin-left: 30px;
+    width: calc(100% - 30px);
+    height: 20px;
+    background-color: #f0f0f0;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+aside {
+    width: 55px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #ccc;
+    right: 0 ;
+}
+
+main {
+    margin-top: 123px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#search-for-event {
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#event-search {
+    width: 150px;
+    margin-top: 17px;
+}
+
+#back-button {
+    margin-left: 10px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+button {
+    margin-top: 16px;
+}
+
+main {
+    margin-top: 123px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#search-for-event {
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+#event-search {
+    width: 150px;
+}
+
+#back-button {
+    margin-left: 10px;
+}
