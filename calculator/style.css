@@ -8,11 +8,11 @@ body {
 }
 
 #calculator {
-    width: 300px; /* Adjusted width to accommodate the buttons */
+    width: 300px; 
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
-    background-color: #f2f2f2; /* Added background color */
+    background-color: #f2f2f2; 
 }
 
 #display {
@@ -47,4 +47,14 @@ body {
 
 #buttons button:hover {
     background-color: #e6e6e6;
+}
+
+.changedButtons {
+    background-color: yellow;
+}
+
+#input{
+    width: inherit;
+    height: inherit;
+    
 }
