@@ -8,6 +8,14 @@ body {
 input{
     height: 20px;
 }
+#create{
+    width: 30%;
+    height: 30px;
+    background-color: #4CAF50;
+
+}
+
+
 
 #navbar {
     margin-left: 30px;
@@ -27,6 +35,9 @@ aside {
     top: 0;
     background-color: #ccc;
     right: 0 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main {
@@ -119,4 +130,20 @@ footer {
     display: block;
     width: 100%;
     margin-bottom: 10px;
+}
+.tooltip, .tooltiptext{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    visibility: hidden;
+}
+
+aside:hover .tooltip::after, aside:hover .tooltiptext{ 
+    visibility: visible;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+
 }

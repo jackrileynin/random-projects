@@ -1,5 +1,6 @@
 const eventList = document.querySelector("ul");
 const createEvent = document.getElementById("create")
+const searchEvent = document.getElementById("event-search")
 let time = 0
 createEvent.addEventListener("click", function(){
     eventList.classList.remove("fill-content")
@@ -23,12 +24,12 @@ createEvent.addEventListener("click", function(){
     eventList.appendChild(editPlane);
     let index = 0
     submit.addEventListener("click", function(){
-        index ++ ;
+        eventList.classList.add("fill-content")
+        Index++
         JSON.stringify(index)
-        localStorage.setItem("index", index)
-        localStorage.setItem(`title${index}`, inputTitle.value)
-        localStorage.setItem(`countdown${index}`, inputCountdown.value)
-        localStorage.setItem(`content${index}`, inputContent.value)
+        localStorage.setItem(`title for ${index}, ${inputTitle.value}
+        countdown for ${index}, ${inputCountdown.value}
+        content for ${index} , ${inputContent.value}`)
         const event = document.createElement("li")
         const title = document.createElement("h3")
         const countdown = document.createElement("h4")
@@ -46,6 +47,44 @@ createEvent.addEventListener("click", function(){
         event.appendChild(remove)
         event.appendChild(edit)
         eventList.appendChild(event)
+        eventList.removeChild(editPlane)
+
+
     })
 
 })
+// tie to event list 
+// Create factory function for the search bar and form input 
+
+function searchForEvent(inputs){
+    const newInputs = inputs
+    if (!inputs){
+        return "Please enter the event title"
+
+    } else {
+        return function searchlocalstorage(){
+            localStorage.getItem(newInputs)
+        }
+    }
+
+    
+}
+
+
+ 
+searchEvent.addEventListener("submit", ()=>{
+    // submit event for title queries 
+    searchEvent.preventDefault()
+    const search = searchForEvent(searchEvent.value)
+    
+
+    if(search == null){
+        return "No event found"
+    } else {
+        return search()
+        //to be continued - adjust front end to display the search result 
+    }
+})
+
+
+
