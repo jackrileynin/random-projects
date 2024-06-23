@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import React from "react";
-import RecipePage from "./recipePage";
+import RecipeList from "./recipePage";
 import NavBar from "./enlargeRecipe";
 
 

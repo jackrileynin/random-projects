@@ -1,8 +1,8 @@
 import React from "react"; 
 
-function recipeList(){
+function RecipeList(){
     
 }
 
 
-export default recipeList;
+export default RecipeList;
