@@ -7,22 +7,17 @@ import NavBar from "./enlargeRecipe";
 
 function MainPage(){
   
-       const [recipes, setRecipe] = useState([0]);
+       const [recipes, setRecipe] = useState([]);
         useEffect(() => {   
-        fetch(`http://www.themealdb.com/api/json/v1/1/categories.php`)
-        .then((res) => {
-            return res.json();
-
-
-        }).then((data) => {
-            console.log(data);
-            setRecipe(data = data.categories);
-
-        });
-
-    }, []);
+            fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data);
+                    setRecipe(data.categories);
+                })
+                .catch((error) => console.error("Error fetching recipes:", error));
+        }, []);
     
-    console.log(data);
    //create a function that will expand the details of the defferent recipes under the categories when clicked
    // make a state variable that will hold the navbar and its changed stated when clicked 
     
@@ -32,8 +27,7 @@ return (
         <header className="main-header">
 
         </header>
-       <NavBar categories = {recipes} />
-
+            <NavBar categories={recipes} />
         <footer>
 
         </footer>
