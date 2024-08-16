@@ -20,18 +20,15 @@ function MainPage(){
     
    //create a function that will expand the details of the defferent recipes under the categories when clicked
    // make a state variable that will hold the navbar and its changed stated when clicked 
-    
+   
+
  
 return (
-    <div> 
-        <header className="main-header">
+    
 
-        </header>
             <NavBar categories={recipes} />
-        <footer>
 
-        </footer>
-    </div>
+    
 )
 
 }

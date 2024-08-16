@@ -6,6 +6,10 @@ function NavBar({ categories }) {
     const [displayCatagoryListOnly, setDisplayCatagoryList] = useState(true);
     const [recipeData, setRecipeData] = useState([]);
     const [chosenCategory, setChosenCategory] = useState("");
+    const styling = {
+        
+        color: "#4A4A4A",
+    };
 
     const fetchCall = () => {
         fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${chosenCategory}`)
@@ -28,8 +32,15 @@ function NavBar({ categories }) {
         setExpand(!expand);
         setDisplayCatagoryList(!displayCatagoryListOnly);
     };
-
-
+    const styles = {
+        marginBottom: "8px",
+    };   
+    const buttonStyle = {
+        backgroundColor: "#D4AF37",
+        color: "#4A4A4A"
+        };  
+    
+    
     return (
         <div>
             {displayCatagoryListOnly ? (
@@ -37,9 +48,9 @@ function NavBar({ categories }) {
                 <nav className="center-nav">
                 
                         {categories.map((category) => (
-                            <div className="list-item" key={category.strCategory}>
-                                <button onClick={() => handleCategoryClick(category.strCategory)}>
-                                    <h3>{category.strCategory}</h3>
+                            <div style={styles} className="list-item" key={category.strCategory}>
+                                <button  onClick={() => handleCategoryClick(category.strCategory)} style={buttonStyle}>
+                                    <h3 style={styling}>{category.strCategory}</h3>
                                 </button>
                                 
                             </div>
@@ -51,12 +62,12 @@ function NavBar({ categories }) {
                    { 
                         categories.map((category) => (
                             <div className="list-item" key={category.strCategory}>
-                                <button onClick={() => handleCategoryClick(category.strCategory)}>
-                                    <h3>{category.strCategory}</h3>
+                                <button  onClick={() => handleCategoryClick(category.strCategory)}>
+                                    <h3 style={styling}>{category.strCategory}</h3>
                                 </button>
                                 {expand && chosenCategory === category.strCategory && (
                                     <div className="expanded-recipe-list">
-                                        <p>{category.strCategoryDescription}</p>
+                                        <p style={styling}>{category.strCategoryDescription}</p>
                                         <img src={category.strCategoryThumb} alt="food" />
                                         <RecipeList recipes={recipeData} />
                                     </div>
